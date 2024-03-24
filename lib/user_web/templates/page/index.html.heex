@@ -1,0 +1,24 @@
+<section class="phx-hero">
+  <h1><%= gettext "Welcome to %{name}!", name: "Phoenixa" %></h1>
+  <p>...</p>
+</section>
+
+<section class="row">
+  <article class="column">
+    <h2>Resources</h2>
+    <ul>
+      <li>
+        <a href="https://hexdocs.pm/phoenix/overview.html">Guides &amp; Docs</a>
+      </li>
+      <li>
+        <a href="https://github.com/phoenixframework/phoenix">Source</a>
+      </li>
+      <li>
+        <a href="https://github.com/phoenixframework/phoenix/blob/v1.6/CHANGELOG.md">v1.6 Changelog</a>
+      </li>
+    </ul>
+    <%= for stock <- @stocks do %>
+      <p><%= stock.name %></p>
+    <% end %>
+  </article>
+</section>
